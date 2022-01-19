@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<h1> Dashboard here</h1>
+
+<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="header_content d-flex flex-row align-items-center justify-content-start">
+						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+
+							<nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+
+									{% if user.is_authenticated %}
+
+									<li> <a href="logout"><h3>Logout</h3></a></li>
+									<li><h3>hello, {{user.username}}</h3></li>
+
+									{% else %}
+
+									{% endif %}
+									<br>
+									<br>
+								</ul>
+							</nav>
+
+<ul>
+    {% for d in data %}
+        <li>name: {{ d.name }}</li>
+        <li>email:{{ d.Email }}</li>
+        <li>date_of_birth:{{ d.date_of_birth }}</li>
+        <li>mobile_number:{{ d.mobile_number }}</li>
+        <br>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>

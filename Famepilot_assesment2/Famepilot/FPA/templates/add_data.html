@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add_data</title>
+</head>
+<body>
+<h3>Add data here...</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Add Details </h1>
+            <form action="" method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn btn-primary btn-sm" value=""> Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
